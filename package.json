@@ -11,6 +11,10 @@
   "engines": {
     "node": ">=0.12.0"
   },
+  "files": [
+    "index.js",
+    "lib/**/*.js"
+  ],
   "scripts": {
     "lint": "jshint index.js lib/**/*.js test/index.js test/lib/**/*.js",
     "test": "mocha test/*.js test/lib/**/*.js --slow 1000 --timeout 3000"
@@ -20,6 +24,9 @@
     "jquery"
   ],
   "dependencies": {
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-wrapper": "^1.0.0",
+    "metal-tools-build-globals": "mairatma/metal-tools-build-globals",
     "stream-combiner": "^0.2.2",
     "stream-consume": "^0.1.0",
     "vinyl-fs": "^2.2.1"
