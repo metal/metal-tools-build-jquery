@@ -27,7 +27,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-wrapper": "^1.0.0",
     "metal-jquery-adapter": "github:metal/metal-jquery-adapter#master",
-    "metal-tools-build-globals": "^0.1.0",
+    "metal-tools-build-globals": "^1.0.0",
     "stream-combiner": "^0.2.2",
     "stream-consume": "^0.1.0",
     "vinyl-fs": "^2.2.1"
