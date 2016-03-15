@@ -24,6 +24,7 @@
     "jquery"
   ],
   "dependencies": {
+    "gulp-if": "^2.0.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-wrapper": "^1.0.0",
     "metal-jquery-adapter": "github:metal/metal-jquery-adapter#master",

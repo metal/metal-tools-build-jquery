@@ -33,6 +33,24 @@ describe('Pipeline - Build JQuery', function() {
 		consume(stream);
 	});
 
+	it('should build js files to a single bundle without its source map', function(done) {
+		var stream = vfs.src('test/fixtures/js/Bar.js')
+      .pipe(buildJQuery({
+        sourceMaps: false
+      }));
+
+    var files = [];
+    stream.on('data', function(file) {
+			files.push(file.relative);
+		});
+		stream.on('end', function() {
+			assert.strictEqual(1, files.length);
+			assert.strictEqual('metal.js', files[0]);
+			done();
+		});
+		consume(stream);
+	});
+
 	it('should build js files to a bundle with the specified name', function(done) {
 		var stream = vfs.src('test/fixtures/js/Bar.js')
       .pipe(buildJQuery({bundleFileName: 'foo.js'}));
